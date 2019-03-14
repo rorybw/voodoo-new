@@ -2,7 +2,8 @@ html {
   overflow-x: hidden; }
 
 body {
-  font-family: "Raleway", sans-serif;
+  font-family: "Museo Slab", serif;
+  font-weight: 100;
   background: #fff;
   font-size: 16px;
   line-height: 1.6;
@@ -21,8 +22,8 @@ h1, h2, h3, h4, h5,
 .h1, .h2, .h3, .h4, .h5 {
   line-height: 1.45;
   color: #000;
-  font-family: "Dirty Headline", serif;
-  font-weight: ; }
+  font-family: "Korolev", sans-serif;
+  font-weight: 900 !important; }
 
 .text-primary {
   color: #D94E54 !important; }
@@ -208,7 +209,8 @@ h1, h2, h3, h4, h5,
     width: 100px;
     border-radius: 50%; }
   .menu-item .menu-price {
-    font-family: "Playfair Display", serif;
+    font-family: "Museo Slab", serif;
+    font-weight: 100;
     font-size: 24px; }
 
 @media screen and (max-width: 768px) {
@@ -235,7 +237,8 @@ h1, h2, h3, h4, h5,
   padding-left: 30px;
   padding-right: 30px;
   font-size: 16px;
-  font-family: "Playfair Display", serif; }
+  font-family: "Museo Slab", serif;
+  font-weight: 100;}
   .btn.btn-lg {
     font-size: 16px !important;
     padding: 13px 40px !important; }
