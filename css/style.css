@@ -2,7 +2,7 @@ html {
   overflow-x: hidden; }
 
 body {
-  font-family: "Museo Slab", serif;
+  font-family: "Bitter", serif;
   font-weight: 100;
   background: #fff;
   font-size: 16px;
@@ -18,12 +18,17 @@ a {
     text-decoration: none;
     color: #D94E54; }
 
+.mpideco {
+    
+    font-family: "MPIDeco", sans-serif !important;
+}
+
 h1, h2, h3, h4, h5,
 .h1, .h2, .h3, .h4, .h5 {
   line-height: 1.45;
   color: #000;
-  font-family: "Korolev", sans-serif;
-  font-weight: 900 !important; }
+  font-family: "MPINo508", sans-serif;
+  font-weight: ;}
 
 .text-primary {
   color: #D94E54 !important; }
@@ -146,7 +151,8 @@ h1, h2, h3, h4, h5,
   .ftco-cover .ftco-subheading, .ftco-cover p {
     color: rgba(255, 255, 255, 0.7);
     font-weight: 300;
-    font-family: "Raleway", sans-serif; }
+    font-family: "MPIDeco", sans-serif;
+    font-size: 28px;}
   @media screen and (max-width: 768px) {
     .ftco-cover .btn {
       width: 100% !important;
@@ -350,7 +356,7 @@ textarea.form-control {
   text-transform: uppercase;
   letter-spacing: .5em;
   color: #d4d4d4;
-  font-family: "Raleway", sans-serif;
+  font-family: "MPIDeco", sans-serif;
   font-weight: 300; }
 
 .ftco-section .ftco-primary-title {
