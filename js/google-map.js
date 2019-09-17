@@ -1,62 +1,50 @@
 
-var google;
+var marker;
 
-function init() {
-    // Basic options for a simple Google Map
-    // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
-    // var myLatlng = new google.maps.LatLng(40.71751, -73.990922);
-    var myLatlng = new google.maps.LatLng(40.69847032728747, -73.9514422416687);
-    // 39.399872
-    // -8.224454
+function initMap() {
+
+  var myLatLng = {lat: 51.500513, lng: -0.113458};
+
+  var map = new google.maps.Map(
+      document.getElementById('map'), {
+          zoom: 16,
+          center: myLatLng});
     
-    var mapOptions = {
-        // How zoomed in you want the map to start at (always required)
-        zoom: 7,
-
-        // The latitude and longitude to center the map (always required)
-        center: myLatlng,
-
-        // How you would like to style the map. 
-        scrollwheel: false,
-        styles: [
-            {
-                "featureType": "administrative.country",
-                "elementType": "geometry",
-                "stylers": [
-                    {
-                        "visibility": "simplified"
-                    },
-                    {
-                        "hue": "#ff0000"
-                    }
-                ]
-            }
-        ]
-    };
-
     
+    var image = 'images/MapIcon.png';
 
-    // Get the HTML DOM element that will contain your map 
-    // We are using a div with id="map" seen below in the <body>
-    var mapElement = document.getElementById('map');
-
-    // Create the Google Map using out element and options defined above
-    var map = new google.maps.Map(mapElement, mapOptions);
+    /*var beachMarker = new google.maps.Marker({
+    position: myLatLng,
+    map: map,
+    icon: image
+    });*/
+ 
+    var marker = new google.maps.Marker({
+      position: myLatLng,
+      map: map,
+      icon: 'images/MapIcon6.png',
+      title: 'Voodoo Chicken & Spice'});
     
-    var addresses = ['New York'];
-
-    for (var x = 0; x < addresses.length; x++) {
-        $.getJSON('http://maps.googleapis.com/maps/api/geocode/json?address='+addresses[x]+'&sensor=false', null, function (data) {
-            var p = data.results[0].geometry.location
-            var latlng = new google.maps.LatLng(p.lat, p.lng);
-            new google.maps.Marker({
-                position: latlng,
-                map: map,
-                icon: 'images/loc.png'
-            });
-
-        });
+    var contentString = '<div id="content">'+
+      '<div id="siteNotice">'+
+      '</div>'+
+      '<h2 id="firstHeading" class="firstHeading MPINo508">Voodoo Chicken & Spice</h2>'+
+      '<div id="bodyContent">'+
+      '<p><b>Lower Marsh, Waterloo, London, SE1 7AE</b><br>' +
+      'Tuesday - Friday, 11:30 - 14:30</p>'+
+      '<p><a href="https://goo.gl/maps/ZzSRmz3Z6YUeWbG3A" target="_blank">'+
+      '<b><u>Directions</u></b></a> '+
+      '</p>'+
+      '</div>'+
+      '</div>';
+    
+        var infowindow = new google.maps.InfoWindow({
+        content: contentString,
+        maxWidth: 400
+      });
+    
+    marker.addListener('click', function() {
+    infowindow.open(map, marker);
+  });
+    
     }
-    
-}
-google.maps.event.addDomListener(window, 'load', init);

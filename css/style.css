@@ -380,6 +380,18 @@ textarea.form-control {
   margin-top: 0;
   margin-bottom: 30px; }
 
+#shop {
+  padding: 8em 0; }
+  #shop .img {
+    position: absolute;
+    left: 0; }
+    @media screen and (max-width: 768px) {
+      #shop .img {
+        position: relative;
+        left: inherit; }
+        #shop .img img {
+          max-width: 100%; } }
+
 #section-about {
   padding: 8em 0; }
   #section-about .img {
@@ -391,6 +403,7 @@ textarea.form-control {
         right: inherit; }
         #section-about .img img {
           max-width: 100%; } }
+
 
 #section-offer {
   padding: 12em 0; }
