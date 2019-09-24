@@ -18,15 +18,18 @@ a {
     text-decoration: none;
     color: #D94E54; }
 
-.mpideco {
-    
-    font-family: "MPIDeco", sans-serif; !important;
+.MPINo508 { 
+	font-family: MPINo508;
+	font-weight: normal;
+	font-style: normal;
 }
 
-.MPINo508 {
-    
-    font-family: "MPINo508", sans-serif; !important;
+.MPIDeco { 
+	font-family: MPIDeco;
+	font-weight: normal;
+	font-style: normal;
 }
+
 
 .navbar.scrolled .logo-white {
     display: none;
